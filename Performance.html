@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>performance - TRONGJAI DESIGN & CONSTRUCTION</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .works { text-align: center; }
+    .works-item { margin-bottom: 32px; }
+    .works-item img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 8px;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .works-item img:hover { transform: scale(1.02); }
+    .works-item h3 { margin: 8px 0; color:#004aad; }
+    .btn-detail {
+      display:inline-block;
+      padding:8px 14px;
+      background:#004aad;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+    }
+    .btn-detail:hover { background:#0a5be1; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <!-- ส่วนหัว -->
+  <header>
+    <h1>Performance</h1>
+    <p>โครงการก่อสร้างและรีโนเวทที่ผ่านมาของ TRONGJAI DESIGN & CONSTRUCTION</p>
+  </header>
+
+  <!-- เมนู -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- เนื้อหา -->
+  <section class="wrap works">
+    <div class="works-item">
+      <img src="images/work1.1.jpg" alt="บ้านหลังที่ 1" >
+      <h3>สำรวจและประเมินหน้างานหอพัก</h3>
+      <p>ห้องพักที่................. 5 ชั้น ต้องการรีโนเวท</p>
+      <a class="btn-detail" href="works1.html">ดูรายละเอียด</a>
+    </div>
+
+    <div class="works-item">
+      <img src="images/work2.1.jpg" alt="บ้านหลังที่ 2" onclick="openLightbox(this.src)">
+      <h3>งานกลางคืน งานหลุม งานการ์ดเลนถนน </h3>
+      <p>บ้านหลังที่ 2</p>
+      <a class="btn-detail" href="works2.html">ดูรายละเอียด</a>
+    </div>
+
+    <div class="works-item">
+      <img src="images/work3.1.jpg" alt="'รีโนเวทคอนโด'" onclick="openLightbox(this.src)">
+      <h3>งานรีโนเวท</h3>
+      <p>งานปรับปรุง/ซ่อมแซม คอมโด เนื่องจากแผ่นดินไหว วันที่ 28/03/2568 
+      </p>
+      <p>ชื่อโครงการ: คราม สุขุมวิท 26
+      </p>
+      <p>ที่ตั้ง: 55 ซอยสุขุมวิท 26 แขวงคลองตัน เขตคลองเตย กรุงเทพมหาครฯ
+      </p>
+      <a class="btn-detail" href="works3.html">ดูรายละเอียด</a>
+    </div>
+
+    <div class="works-item">
+      <img src="images/work4.jpg" alt="บ้านหลังที่ 4" onclick="openLightbox(this.src)">
+      <h3>บ้านหลังที่ 4</h3>
+      <p>บ้านหลังที่ 4</p>
+      <a class="btn-detail" href="works4.html">ดูรายละเอียด</a>
+    </div>
+
+    <div class="works-item">
+      <img src="images/work4.jpg" alt="บ้านหลังที่ 5" onclick="openLightbox(this.src)">
+      <h3>บ้านหลังที่ 5</h3>
+      <p>บ้านหลังที่ 5</p>
+      <a class="btn-detail" href="works5.html">ดูรายละเอียด</a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ส่วนท้าย -->
+  <footer>
+    © 2025 TRONGJAI DESIGN & CONSTRUCTION · สงวนลิขสิทธิ์
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = src;
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>

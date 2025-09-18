@@ -1,0 +1,106 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Tahoma, sans-serif; line-height:1.6; background:#fff; }
+
+/* Header */
+header {
+  background: #062b5d;
+  color: #7e7d4d;
+  padding: 20px;
+  text-align: center;
+}
+header h1 { margin:0 0 6px; font-size: clamp(22px, 3.2vw, 36px); }
+header p {
+  margin: 0;
+  font-size: 16px;
+  opacity: .9;
+}
+
+/* เมนู */
+nav { position: sticky; top:0; z-index:10; background:#0f1a2b; padding:8px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+nav a { color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; }
+nav a:hover { background:#062b5d; }
+
+/* Layout */
+.wrap { max-width:1100px; margin:0 auto; padding:28px 16px; }
+
+/* HERO */
+.hero {
+  position: relative;
+  border-radius: 14px;
+  min-height: 360px;
+  display: grid;
+  align-items: center;
+  padding: 48px 20px;
+  background: url("images/bb.jpg") no-repeat center center; /* ← พาธรูป */
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+  border: 1px solid #e6e9ef;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.hero-content { position: relative; z-index: 1; max-width: 680px; }
+.hero h2 { margin:0 0 10px; font-size: clamp(20px, 3vw, 32px); }
+/* บังคับให้ h2 ใน hero เป็นสีขาว */
+.hero-content h2 { color:#fff !important; }
+.muted { color:#cfe1ff; }
+
+/* Cards / Text */
+h2 { margin:0 0 14px; font-size: clamp(20px, 2.6vw, 28px); color:#004aad; }
+.grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { border:1px solid #e6e9ef; border-radius:12px; padding:16px; background:#fff; }
+
+/* CTA Button */
+.cta { display:inline-block; padding:10px 16px; background:#004aad; color:#fff; text-decoration:none; border-radius:10px; margin-top:8px; }
+.cta:hover { background:#0a5be1; }
+
+/* Footer */
+footer { background:#0f1a2b; color:#cfe1ff; text-align:center; padding:24px 16px; margin-top:12px; font-size:14px; }
+header {
+  background: #062b5d;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+  gap: 16px; /* ระยะห่างระหว่างโลโก้กับข้อความ */
+}
+
+.logo {
+  height: 60px; /* ปรับขนาดโลโก้ */
+  width: auto;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: clamp(22px, 3.2vw, 36px);
+}
+
+.header-text p {
+  margin: 0;
+  opacity: .9;
+}
+header {
+  background: #062b5d;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-style: normal; 
+  font-size: 80px;  
+  font-weight: 20;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-center {
+  height: 90px;   /* กำหนดขนาดโลโก้ */
+  width: auto;
+  margin-bottom: 10px;
+}
+
