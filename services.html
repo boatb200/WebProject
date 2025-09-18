@@ -5,6 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บริการ - TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ปรับการ์ดให้มีพื้นหลังรูป */
+    .card {
+      color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      min-height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* ใส่เลเยอร์มืดให้อ่านง่าย */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+      border-radius: 12px;
+    }
+    .card h3, .card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ใส่รูปแต่ละการ์ด */
+    .design { background-image: url('images/service1.1.jpg'); }
+    .build { background-image: url('images/service1.2.jpg'); }
+    .system { background-image: url('images/service1.3.jpg'); }
+    .consult { background-image: url('images/service1.4.jpg'); }
+  </style>
 </head>
 <body>
   <!-- ส่วนหัว -->
@@ -26,19 +57,19 @@
   <section class="wrap">
     <h2>บริการของเรา</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card design">
         <h3>ออกแบบสถาปัตย์/ภายใน</h3>
         <p>วิเคราะห์ความต้องการ วางคอนเซ็ปต์ เขียนแบบก่อสร้าง พร้อมภาพ 3D</p>
       </div>
-      <div class="card">
+      <div class="card build">
         <h3>ก่อสร้าง/รีโนเวท</h3>
         <p>งานโครงสร้าง–สถาปัตย์–งานระบบ จบครบในที่เดียว</p>
       </div>
-      <div class="card">
+      <div class="card system">
         <h3>งานระบบอาคาร</h3>
         <p>ไฟฟ้า ประปา แอร์ ความปลอดภัย ตามมาตรฐาน</p>
       </div>
-      <div class="card">
+      <div class="card consult">
         <h3>ที่ปรึกษาโครงการ</h3>
         <p>บริหารงบประมาณ–เวลา ตรวจรับงาน คุมคุณภาพ</p>
       </div>
