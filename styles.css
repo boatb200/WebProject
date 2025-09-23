@@ -1,25 +1,91 @@
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
-body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Tahoma, sans-serif; line-height:1.6; background:#fff; }
+body { 
+  margin:0; 
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Tahoma, sans-serif; 
+  line-height:1.6; 
+  background:#fff; 
+  transition: background 0.3s ease;
+}
 
 /* Header */
 header {
   background: #062b5d;
-  color: #7e7d4d;
+  color: #fff;
   padding: 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-header h1 { margin:0 0 6px; font-size: clamp(22px, 3.2vw, 36px); }
+header::after {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+  animation: shine 4s infinite linear;
+}
+@keyframes shine {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+header h1 { 
+  margin:0 0 6px; 
+  font-size: clamp(22px, 3.2vw, 36px); 
+  letter-spacing: 1px;
+}
 header p {
   margin: 0;
   font-size: 16px;
   opacity: .9;
 }
 
+/* โลโก้ */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 16px;
+  animation: fadeIn 1.5s ease;
+}
+.logo {
+  height: 60px; 
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.logo:hover { transform: scale(1.1) rotate(-3deg); }
+
+.header-text h1 {
+  margin: 0;
+}
+.header-text p {
+  margin: 0;
+  opacity: .9;
+}
+
 /* เมนู */
-nav { position: sticky; top:0; z-index:10; background:#0f1a2b; padding:8px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
-nav a { color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; }
-nav a:hover { background:#062b5d; }
+nav { 
+  position: sticky; 
+  top:0; 
+  z-index:10; 
+  background:#0f1a2b; 
+  padding:8px; 
+  display:flex; 
+  gap:8px; 
+  justify-content:center; 
+  flex-wrap:wrap; 
+}
+nav a { 
+  color:#fff; 
+  text-decoration:none; 
+  padding:8px 12px; 
+  border-radius:8px; 
+  transition: all 0.3s ease;
+}
+nav a:hover { 
+  background:#004bac; 
+  transform: translateY(-2px); 
+}
 
 /* Layout */
 .wrap { max-width:1100px; margin:0 auto; padding:28px 16px; }
@@ -32,7 +98,7 @@ nav a:hover { background:#062b5d; }
   display: grid;
   align-items: center;
   padding: 48px 20px;
-  background: url("images/bb.jpg") no-repeat center center; /* ← พาธรูป */
+  background: url("images/bb.jpg") no-repeat center center; 
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -43,64 +109,107 @@ nav a:hover { background:#062b5d; }
   position: absolute; inset: 0;
   background: rgba(0,0,0,0.35);
 }
-.hero-content { position: relative; z-index: 1; max-width: 680px; }
+.hero-content { 
+  position: relative; 
+  z-index: 1; 
+  max-width: 680px; 
+  animation: slideUp 1.2s ease forwards;
+}
 .hero h2 { margin:0 0 10px; font-size: clamp(20px, 3vw, 32px); }
-/* บังคับให้ h2 ใน hero เป็นสีขาว */
 .hero-content h2 { color:#fff !important; }
 .muted { color:#cfe1ff; }
 
-/* Cards / Text */
-h2 { margin:0 0 14px; font-size: clamp(20px, 2.6vw, 28px); color:#004aad; }
+/* Cards */
+h2 { 
+  margin:0 0 14px; 
+  font-size: clamp(20px, 2.6vw, 28px); 
+  color:#004aad; 
+}
 .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.card { border:1px solid #e6e9ef; border-radius:12px; padding:16px; background:#fff; }
+.card { 
+  border:1px solid #e6e9ef; 
+  border-radius:12px; 
+  padding:16px; 
+  background:#fff; 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover { 
+  transform: translateY(-6px); 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
 
 /* CTA Button */
-.cta { display:inline-block; padding:10px 16px; background:#004aad; color:#fff; text-decoration:none; border-radius:10px; margin-top:8px; }
-.cta:hover { background:#0a5be1; }
+.cta { 
+  display:inline-block; 
+  padding:10px 16px; 
+  background:#004aad; 
+  color:#fff; 
+  text-decoration:none; 
+  border-radius:10px; 
+  margin-top:8px; 
+  transition: all 0.3s ease;
+}
+.cta:hover { 
+  background:#0a5be1; 
+  transform: scale(1.05); 
+}
 
 /* Footer */
-footer { background:#0f1a2b; color:#cfe1ff; text-align:center; padding:24px 16px; margin-top:12px; font-size:14px; }
-header {
-  background: #062b5d;
-  color: #fff;
-  padding: 20px;
+footer { 
+  background:#0f1a2b; 
+  color:#cfe1ff; 
+  text-align:center; 
+  padding:24px 16px; 
+  margin-top:12px; 
+  font-size:14px; 
+  animation: fadeIn 2s ease;
 }
 
-.logo-container {
-  display: flex;
+/* Animation */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(20px);}
+  to { opacity:1; transform: translateY(0);}
+}
+@keyframes slideUp {
+  from { opacity:0; transform: translateY(40px);}
+  to { opacity:1; transform: translateY(0);}
+}
+.hero2 {
+  position: relative;
+  border-radius: 14px;
+  min-height: 360px;
+  display: grid;
   align-items: center;
-  justify-content: center; /* จัดให้อยู่กึ่งกลาง */
-  gap: 16px; /* ระยะห่างระหว่างโลโก้กับข้อความ */
+  padding: 48px 20px;
+  background: url("images/about1.1.jpg") no-repeat center center;  
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+  border: 1px solid #e6e9ef;
 }
 
-.logo {
-  height: 60px; /* ปรับขนาดโลโก้ */
-  width: auto;
+.hero2::before {
+  content: "";
+  position: absolute; 
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* เข้มขึ้นกว่า hero ปกติ */
 }
 
-.header-text h1 {
-  margin: 0;
-  font-size: clamp(22px, 3.2vw, 36px);
+.hero2-content { 
+  position: relative; 
+  z-index: 1; 
+  max-width: 680px; 
+  animation: slideUp 1.2s ease forwards;
 }
 
-.header-text p {
-  margin: 0;
-  opacity: .9;
-}
-header {
-  background: #062b5d;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-  font-style: normal; 
-  font-size: 80px;  
-  font-weight: 20;
-  padding: 20px;
-  text-align: center;
+.hero2 h2 { 
+  margin: 0 0 10px; 
+  font-size: clamp(20px, 3vw, 32px); 
+  color: #ffeb3b; /* ใช้โทนเหลืองตัดกับพื้นหลัง */
 }
 
-.logo-center {
-  height: 90px;   /* กำหนดขนาดโลโก้ */
-  width: auto;
-  margin-bottom: 10px;
+.hero2 .muted { 
+  color: #ffe082; 
 }
 

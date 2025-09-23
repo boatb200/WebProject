@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>เกี่ยวกับเรา - TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .team-member {
+      text-align: center;
+      max-width: 220px;
+    }
+
+    .team-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px; /* มุมโค้งมน */
+      border: 4px solid #004aad; /* กรอบสีน้ำเงินเข้ม */
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* เงานุ่ม */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-photo:hover {
+      transform: scale(1.05); /* ขยายเบา ๆ เมื่อ hover */
+      box-shadow: 0 12px 20px rgba(0,0,0,0.25); /* เงาเข้มขึ้น */
+    }
+
+    .team-member h4 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .team-member .position {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <!-- ส่วนหัว -->
@@ -16,7 +56,7 @@
   <!-- เมนู -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
     <a href="performance.html">Performance</a>
@@ -24,16 +64,58 @@
 
   <!-- เกี่ยวกับเรา -->
   <section class="wrap">
+  <div class="hero2">
+    <div class="hero2-content">
+      <h2>เกี่ยวกับเรา</h2>
+      <p>
+        TRONGJAI DESIGN & CONSTRUCTION คือทีมงานผู้เชี่ยวชาญด้านงานออกแบบและก่อสร้าง เรามีประสบการณ์ครอบคลุมงานที่อยู่อาศัย อาคารพาณิชย์ และดีเทล  
+        ยึดมั่นในความปลอดภัย คุณภาพ และความพึงพอใจของลูกค้าเป็นสำคัญ  
+      </p>
+      <p>
+        จุดแข็งของเราคือความใส่ใจในรายละเอียด การทำงานตรงเวลา และการควบคุมงบประมาณอย่างโปร่งใส  
+        เพื่อให้ทุกโครงการสำเร็จได้ตรงตามความต้องการของลูกค้ามากที่สุด
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ทีมงาน -->
+  <section class="wrap team-section">
     <h2>ทีมงานของเรา</h2>
-    <p>
-      TRONGJAI DESIGN & CONSTRUCTION คือทีมงานผู้เชี่ยวชาญด้านงานออกแบบและก่อสร้าง  
-      เรามีประสบการณ์ครอบคลุมงานที่อยู่อาศัย อาคารพาณิชย์ และดีเทล  
-      ยึดมั่นในความปลอดภัย คุณภาพ และความพึงพอใจของลูกค้าเป็นสำคัญ  
-    </p>
-    <p>
-      จุดแข็งของเราคือความใส่ใจในรายละเอียด การทำงานตรงเวลา และการควบคุมงบประมาณอย่างโปร่งใส  
-      เพื่อให้ทุกโครงการสำเร็จได้ตรงตามความต้องการของลูกค้ามากที่สุด
-    </p>
+    <div class="team-grid">
+
+      <div class="team-member">
+        <img src="images/about 1.jpg" alt="สมชาย ใจตรง" class="team-photo">
+        <h4>คุณ.....นามสกุล....</h4>
+        <p class="position">ตำแหน่ง Managing Director</p>
+      </div>
+
+      <div class="team-member">
+        <img src="images/about 1.2.jpg" alt="สุวรรณา รักงาน" class="team-photo">
+        <h4>คุณ.....นามสกุล....</h4>
+        <p class="position">ตำแหน่ง Chief Architect</p>
+      </div>
+
+      <div class="team-member">
+        <img src="images/about 1.2.jpg" alt="วิชัย มั่นคง" class="team-photo">
+        <h4>คุณ.....นามสกุล....</h4>
+        <p class="position">ตำแหน่ง Construction Manager</p>
+      </div>
+
+      <div class="team-member">
+        <img src="images/about 1.jpg" alt="นิรมล ชาญใส" class="team-photo">
+        <h4>คุณ.....นามสกุล....</h4>
+        <p class="position">ตำแหน่ง Project Coordinator</p>
+      </div>
+
+      <div class="team-member">
+        <img src="images/about 1.jpg" alt="ธนากร เทคโน" class="team-photo">
+        <h4>คุณ.....นามสกุล....</h4>
+        <p class="position">ตำแหน่ง Design Engineer</p>
+      </div>
+
+    </div>
   </section>
 
   <footer>
