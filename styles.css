@@ -193,7 +193,7 @@ footer {
   content: "";
   position: absolute; 
   inset: 0;
-  background: rgba(0,0,0,0.45); /* เข้มขึ้นกว่า hero ปกติ */
+  background: rgba(0,0,0,0.35); /* ลด overlay ให้อ่านง่ายขึ้น */
 }
 
 .hero2-content { 
@@ -206,7 +206,7 @@ footer {
 .hero2 h2 { 
   margin: 0 0 10px; 
   font-size: clamp(20px, 3vw, 32px); 
-  color: #ffffff; /* ใช้โทนเหลืองตัดกับพื้นหลัง */
+  color: #ffffff; 
 }
 
 .hero2 .muted { 
