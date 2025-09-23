@@ -206,7 +206,7 @@ footer {
 .hero2 h2 { 
   margin: 0 0 10px; 
   font-size: clamp(20px, 3vw, 32px); 
-  color: #ffeb3b; /* ใช้โทนเหลืองตัดกับพื้นหลัง */
+  color: #ffffff; /* ใช้โทนเหลืองตัดกับพื้นหลัง */
 }
 
 .hero2 .muted { 
