@@ -5,43 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บริการ - TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* ปรับการ์ดให้มีพื้นหลังรูป */
-    .card {
-      color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      min-height: 200px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-    }
-    /* ใส่เลเยอร์มืดให้อ่านง่าย */
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.45);
-      border-radius: 12px;
-    }
-    .card h3, .card p {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ใส่รูปแต่ละการ์ด */
-    .design { background-image: url('images/service1.1.jpg'); }
-    .build { background-image: url('images/service1.2.jpg'); }
-    .system { background-image: url('images/service1.3.jpg'); }
-    .consult { background-image: url('images/service1.4.jpg'); }
-  </style>
 </head>
 <body>
   <!-- ส่วนหัว -->
   <header>
-    <h1>SERVICES</h1>
-    <p>งานครบวงจรทั้งออกแบบ ก่อสร้าง รีโนเวท และที่ปรึกษาโครงการ</p>
+    <div class="logo-container" aria-label="TRONGJAI DESIGN & CONSTRUCTION">
+      <img class="logo" src="images/logo.jpg" alt="TRONGJAI Logo">
+      <div class="header-text">
+        <h1>SERVICES</h1>
+        <p>งานครบวงจรทั้งออกแบบ ก่อสร้าง รีโนเวท และที่ปรึกษาโครงการ</p>
+      </div>
+    </div>
   </header>
 
   <!-- เมนู -->
@@ -53,31 +27,94 @@
     <a href="performance.html">Performance</a>
   </nav>
 
+
   <!-- บริการ -->
   <section class="wrap">
     <h2>บริการของเรา</h2>
     <div class="grid">
-      <div class="card design">
+      <div class="card bg design">
         <h3>ออกแบบสถาปัตย์/ภายใน</h3>
         <p>วิเคราะห์ความต้องการ วางคอนเซ็ปต์ เขียนแบบก่อสร้าง พร้อมภาพ 3D</p>
+        <ul class="mini">
+          <li>สำรวจหน้างาน/วัดพื้นที่</li>
+          <li>Moodboard + Concept</li>
+          <li>แบบสถาปัตย์/เฟอร์นิเจอร์</li>
+        </ul>
+    
       </div>
-      <div class="card build">
+
+      <div class="card bg build">
         <h3>ก่อสร้าง/รีโนเวท</h3>
         <p>งานโครงสร้าง–สถาปัตย์–งานระบบ จบครบในที่เดียว</p>
+        <ul class="mini">
+          <li>ถอดปริมาณ + สเปกวัสดุ</li>
+          <li>ทีมวิศวกรควบคุมงาน</li>
+          <li>รับประกันงานหลังส่งมอบ</li>
+        </ul>
+        
       </div>
-      <div class="card system">
+
+      <div class="card bg system">
         <h3>งานระบบอาคาร</h3>
         <p>ไฟฟ้า ประปา แอร์ ความปลอดภัย ตามมาตรฐาน</p>
+        <ul class="mini">
+          <li>เดินระบบไฟ/สื่อสาร มาตรฐาน</li>
+          <li>สุขาภิบาล/ปรับอากาศ</li>
+          <li>ระบบความปลอดภัย/กล้อง</li>
+        </ul>
+       
       </div>
-      <div class="card consult">
+
+      <div class="card bg consult">
         <h3>ที่ปรึกษาโครงการ</h3>
         <p>บริหารงบประมาณ–เวลา ตรวจรับงาน คุมคุณภาพ</p>
+        <ul class="mini">
+          <li>วางแผนโครงการ/แผนงาน</li>
+          <li>ควบคุมต้นทุน–คุณภาพ</li>
+          <li>รายงานความคืบหน้ารายสัปดาห์</li>
+        </ul>
       </div>
     </div>
   </section>
 
+  <!-- ขั้นตอนการทำงาน -->
+  <section class="wrap">
+    <h2>ขั้นตอนการทำงาน</h2>
+    <ol class="steps">
+      <li><strong>ติดต่อ–นัดหมาย</strong> อธิบายความต้องการ ส่งรูป/แปลน</li>
+      <li><strong>สำรวจหน้างาน</strong> วัดพื้นที่ ประเมินงบเบื้องต้น</li>
+      <li><strong>ออกแบบ–เสนอราคา</strong> แบบ/สเปก/ระยะเวลา</li>
+      <li><strong>ลงมือก่อสร้าง</strong> คุมคุณภาพและความปลอดภัย</li>
+      <li><strong>ส่งมอบ–รับประกัน</strong> ตรวจงาน พร้อมบำรุงรักษา</li>
+    </ol>
+  </section>
+
+  <!-- แพ็กเกจเริ่มต้น -->
+  
+  <section class="wrap">
+  <h2>แพ็กเกจเริ่มต้น</h2>
+
+  <!-- แผ่นโปรโมชัน -->
+  <div class="promo-banner">
+    <img src="images/Service1.5.jpg" alt="โปรโมชัน ตรงใจ ดีไซน์ & คอนสตรัคชั่น">
+  </div>
+
+  <div class="plans">
+    <!-- การ์ดแพ็กเกจตามเดิม -->
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
     © 2025 TRONGJAI DESIGN & CONSTRUCTION · สงวนลิขสิทธิ์
   </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" aria-label="Quick actions">
+    <a href="tel:08XXXXXXXX">โทรด่วน</a>
+    <a href="https://line.me/R/ti/p/~yourlineid" target="_blank" rel="noopener">แชทไลน์</a>
+    <a href="contact.html#quote">ขอประเมินฟรี</a>
+  </div>
 </body>
 </html>
+
