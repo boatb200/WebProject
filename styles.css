@@ -308,3 +308,14 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.promo-banner {
+  text-align: center;      /* จัดรูปให้อยู่กลาง */
+  margin: 20px 0;          /* เว้นระยะด้านบน/ล่าง */
+}
+
+.promo-banner img {
+  max-width: 100%;         /* ป้องกันภาพล้นจอ */
+  height: auto;
+  border-radius: 12px;      /* มุมโค้งนิดหน่อย */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15); /* ใส่เงาให้ดูเด่น */
+}
