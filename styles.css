@@ -350,4 +350,68 @@ footer {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+/* ทำให้เฉพาะ Accordion ของแพ็กเกจมีข้อความสีขาว */
+.package-detail .accordion-content {
+  color: #fff;
+  background: #004aad;   /* พื้นหลังน้ำเงินเข้ม */
+  border-color: #000000; /* ขอบเข้มขึ้นให้อ่านง่าย */
+}
 
+.package-detail .accordion-content li {
+  color: #fff;
+}
+
+/* ทำให้เฉพาะ Accordion ของแพ็กเกจ มีข้อความสีขาวทั้งหมด */
+.package-detail summary {
+  color: #fff; 
+  background: #004aad;   /* พื้นหลังน้ำเงินเข้ม */
+  border-color: #003377; 
+}
+
+.package-detail summary:hover {
+  background: #0056c7;   /* เปลี่ยนเป็นน้ำเงินสดขึ้นเวลา hover */
+}
+
+.package-detail .accordion-content {
+  color: #fff;
+  background: #004aad;
+  border-color: #003377;
+}
+
+.package-detail .accordion-content li {
+  color: #fff;
+}
+
+/*QR_CODE*/
+.contact-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap; /* มือถือจะขึ้นบรรทัดใหม่ */
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-qr {
+  flex: 0 0 auto;
+}
+
+.qr-img {
+  width: 120px;   /* ขนาด QR */
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .contact-flex {
+    flex-direction: column; /* จัดเรียงเป็นแนวตั้ง */
+    align-items: flex-start;
+  }
+  .contact-qr {
+    justify-content: flex-start; /* อยู่ซ้ายเวลาอยู่ข้างล่าง */
+    margin-top: 10px;
+  }
+}

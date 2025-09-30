@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>บริการ - TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ====== Accordion Button Style ====== */
+    details.accordion {
+      border-top: 1px solid #e6e9ef;
+      padding-top: 8px;
+      margin-top: 12px;
+    }
+    details.accordion[open] { padding-bottom: 8px; }
+    details.accordion summary {
+      list-style: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid #000000;
+      background: #004aad;
+      font-weight: 600;
+      user-select: none;
+      transition: background .2s, border-color .2s, transform .08s;
+    }
+    details.accordion summary:hover { background: #000000; border-color: #b9c6de; }
+    details.accordion summary:active { transform: translateY(1px); }
+    details.accordion[open] summary { background: #004aad; border-color: #99b6f0; }
+    details.accordion summary::-webkit-details-marker { display: none; }
+    .accordion-content {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #000000;
+      border-radius: 12px;
+      background: #004aad;
+    }
+    .accordion-content h4 { margin: 0 0 8px 0; font-size: 1.05rem; }
+    .accordion-content ul { margin: 6px 0 0 18px; }
+    .accordion-content li { margin: 4px 0; }
+    /* ไอคอนลูกศรเล็ก ๆ */
+    .chev { transition: transform .2s; }
+    details[open] .chev { transform: rotate(90deg); }
+    /* รูปโปรโมชันให้เต็มความกว้างพอดี */
+    .promo-banner img { width: 100%; height: auto; border-radius: 14px; display: block; }
+  </style>
 </head>
 <body>
   <!-- ส่วนหัว -->
@@ -27,11 +69,11 @@
     <a href="performance.html">Performance</a>
   </nav>
 
-
   <!-- บริการ -->
   <section class="wrap">
     <h2>บริการของเรา</h2>
     <div class="grid">
+      <!-- การ์ด 1 -->
       <div class="card bg design">
         <h3>ออกแบบสถาปัตย์/ภายใน</h3>
         <p>วิเคราะห์ความต้องการ วางคอนเซ็ปต์ เขียนแบบก่อสร้าง พร้อมภาพ 3D</p>
@@ -40,9 +82,23 @@
           <li>Moodboard + Concept</li>
           <li>แบบสถาปัตย์/เฟอร์นิเจอร์</li>
         </ul>
-    
+
+        <details class="accordion">
+          <summary><span class="chev">▶</span> ดูรายละเอียด</summary>
+          <div class="accordion-content">
+            <h4>ขอบเขตงานออกแบบ</h4>
+            <ul>
+              <li>แบบแปลน/รูปด้าน/รูปตัด พร้อมรายการวัสดุและสเปก</li>
+              <li>ภาพ 3D / ภาพเรนเดอร์เบื้องต้น 4–8 มุม ต่อพื้นที่หลัก</li>
+              <li>แบบเฟอร์นิเจอร์บิวท์อิน + รายการประกอบ</li>
+              <li>ชุดแบบยื่นก่อสร้าง/ยื่นเทศบาล (กรณีต้องใช้)</li>
+              <li>คู่มือโทนสี/วัสดุ (Material Board) สำหรับหน้างาน</li>
+            </ul>
+          </div>
+        </details>
       </div>
 
+      <!-- การ์ด 2 -->
       <div class="card bg build">
         <h3>ก่อสร้าง/รีโนเวท</h3>
         <p>งานโครงสร้าง–สถาปัตย์–งานระบบ จบครบในที่เดียว</p>
@@ -51,9 +107,23 @@
           <li>ทีมวิศวกรควบคุมงาน</li>
           <li>รับประกันงานหลังส่งมอบ</li>
         </ul>
-        
+
+        <details class="accordion">
+          <summary><span class="chev">▶</span> ดูรายละเอียด</summary>
+          <div class="accordion-content">
+            <h4>ขั้นตอนการทำงาน</h4>
+            <ul>
+              <li>ประเมินหน้างาน + สำรวจโครงสร้างเดิม/ระบบเดิม</li>
+              <li>เสนอราคาแบบแยกรายการ (BOQ) โปร่งใส ตรวจสอบได้</li>
+              <li>วางแผนงานรายสัปดาห์และรายวัน พร้อมเส้นทาง Critical Path</li>
+              <li>ควบคุมคุณภาพวัสดุและงานติดตั้งตามมาตรฐานวิชาชีพ</li>
+              <li>ทดสอบระบบก่อนส่งมอบ + รับประกันงานช่างตามประเภทงาน</li>
+            </ul>
+          </div>
+        </details>
       </div>
 
+      <!-- การ์ด 3 -->
       <div class="card bg system">
         <h3>งานระบบอาคาร</h3>
         <p>ไฟฟ้า ประปา แอร์ ความปลอดภัย ตามมาตรฐาน</p>
@@ -62,9 +132,23 @@
           <li>สุขาภิบาล/ปรับอากาศ</li>
           <li>ระบบความปลอดภัย/กล้อง</li>
         </ul>
-       
+
+        <details class="accordion">
+          <summary><span class="chev">▶</span> ดูรายละเอียด</summary>
+          <div class="accordion-content">
+            <h4>รายการระบบ</h4>
+            <ul>
+              <li>ระบบไฟฟ้า/ตู้เมน/โหลดเซ็นเตอร์/สายดิน ตามมาตรฐาน วสท./มอก.</li>
+              <li>ระบบปรับอากาศ (แยกส่วน/VRF) พร้อมคำนวณ BTU/ระบบระบายอากาศ</li>
+              <li>ระบบสุขาภิบาล/ท่อน้ำดี–ทิ้ง/บ่อดักไขมัน/ถังเก็บน้ำ</li>
+              <li>ระบบ Fire / สัญญาณเตือน / สปริงเกลอร์ (ตามประเภทอาคาร)</li>
+              <li>CCTV / Access Control / ระบบแลนและไวไฟ</li>
+            </ul>
+          </div>
+        </details>
       </div>
 
+      <!-- การ์ด 4 -->
       <div class="card bg consult">
         <h3>ที่ปรึกษาโครงการ</h3>
         <p>บริหารงบประมาณ–เวลา ตรวจรับงาน คุมคุณภาพ</p>
@@ -73,30 +157,48 @@
           <li>ควบคุมต้นทุน–คุณภาพ</li>
           <li>รายงานความคืบหน้ารายสัปดาห์</li>
         </ul>
+
+        <details class="accordion">
+          <summary><span class="chev">▶</span> ดูรายละเอียด</summary>
+          <div class="accordion-content">
+            <h4>บริการที่ปรึกษา</h4>
+            <ul>
+              <li>ตั้งงบ/วางกรอบสัญญา/กำหนดตัวชี้วัด (KPI) โครงการ</li>
+              <li>ตรวจแบบ/ตรวจสเปก/ช่วยคัดเลือกผู้รับเหมา</li>
+              <li>ตรวจรับงานตามงวด + รายงานภาพถ่ายหน้างาน</li>
+              <li>ทบทวน BOQ/ใบเสนอราคา/ใบแจ้งหนี้ เพื่อความคุ้มค่า</li>
+              <li>บริหารความเสี่ยง/การเปลี่ยนแปลงงาน (Variation Order)</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- แพ็กเกจเริ่มต้น -->
-  
   <section class="wrap">
-  <h2>แพ็กเกจเริ่มต้น</h2>
+    <h2>แพ็กเกจเริ่มต้น</h2>
+    <div class="promo-banner">
+      <img src="images/Service1.5.jpg" alt="โปรโมชัน ตรงใจ ดีไซน์ & คอนสตรัคชั่น">
+    </div>
 
-<!-- แผ่นโปรโมชัน -->
-<div class="promo-banner">
-  <img src="images/Service1.5.jpg" alt="โปรโมชัน ตรงใจ ดีไซน์ & คอนสตรัคชั่น">
-</div>
-
-
-  <div class="plans">
-    <!-- การ์ดแพ็กเกจตามเดิม -->
+   <!-- ตัวอย่าง Accordion สำหรับแพ็กเกจ -->
+<details class="accordion package-detail" style="margin-top:16px;">
+  <summary><span class="chev">▶</span> รายละเอียดแพ็กเกจเบื้องต้น</summary>
+  <div class="accordion-content">
+    <ul>
+      <li><strong>แพ็กเกจออกแบบ</strong>: สำรวจหน้างาน + แบบ 2D/3D + สรุปวัสดุ</li>
+      <li><strong>แพ็กเกจก่อสร้าง</strong>: BOQ รายการ, ตารางงาน, รับประกันงาน</li>
+      <li><strong>แพ็กเกจที่ปรึกษา</strong>: ตรวจรับงวดงาน + รายงานสัปดาห์ + คุมงบ</li>
+    </ul>
   </div>
-</section>
+</details>
+
+  </section>
 
   <!-- Footer -->
   <footer>
     © 2025 TRONGJAI DESIGN & CONSTRUCTION · สงวนลิขสิทธิ์
   </footer>
-
-
-
+</body>
+</html>
