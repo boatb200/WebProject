@@ -5,32 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ผลงาน — งานหลุม งานการ์ดเลนถนน | TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* เสริมสไตล์เล็กน้อยสำหรับเพจงาน */
-    .project-hero {
-      text-align: center;
-    }
-    .project-img {
-      width: 100%;
-      max-width: 960px;
-      border-radius: 12px;
-      border: 1px solid #e6e9ef;
-      display: block;
-      margin: 0 auto 16px;
-    }
-    .specs {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      margin-top: 12px;
-    }
-    .specs .card h4 { margin: 0 0 6px; color:#004aad; }
-    .back-link {
-      display:inline-block; margin-bottom:16px;
-      text-decoration:none; color:#004aad;
-    }
-    .back-link:hover { text-decoration: underline; }
-  </style>
 </head>
 <body>
   <!-- ส่วนหัว -->
@@ -51,129 +25,59 @@
   </nav>
 
   <!-- เนื้อหา -->
-  <section class="wrap">
+  <section class="wrap project-page">
     <a class="back-link" href="performance.html">← กลับไปหน้าผลงาน</a>
 
-     <div class="gallery">
-    <!-- ภาพหลัก -->
-    <div class="gallery-main">
-      <img id="mainImage" src="work2/work2.1.jpg" alt="ภาพหลัก" />
+    <!-- แกลเลอรี (ใช้คลาสเดียวกับหน้าแรก) -->
+    <div class="project-gallery">
+      <div class="project-gallery-main">
+        <img id="mainImage" src="work2/work2.1.jpg" alt="ภาพหลัก งานหลุม/การ์ดเลนถนน">
+      </div>
+
+      <div class="project-thumbs">
+        <img class="project-thumb is-active" src="work2/work2.1.jpg" alt="thumb 1" data-full="work2/work2.1.jpg">
+        <img class="project-thumb" src="work2/work2.2.jpg" alt="thumb 2" data-full="work2/work2.2.jpg">
+        <img class="project-thumb" src="work2/work2.3.jpg" alt="thumb 3" data-full="work2/work2.3.jpg">
+        <img class="project-thumb" src="work2/work2.4.jpg" alt="thumb 4" data-full="work2/work2.4.jpg">
+        <img class="project-thumb" src="work2/work2.5.jpg" alt="thumb 5" data-full="work2/work2.5.jpg">
+        <img class="project-thumb" src="work2/work2.6.jpg" alt="thumb 6" data-full="work2/work2.6.jpg">
+        <img class="project-thumb" src="work2/work2.7.jpg" alt="thumb 7" data-full="work2/work2.7.jpg">
+        <img class="project-thumb" src="work2/work2.8.jpg" alt="thumb 8" data-full="work2/work2.8.jpg">
+        <img class="project-thumb" src="work2/work2.9.jpg" alt="thumb 9" data-full="work2/work2.9.jpg">
+        <img class="project-thumb" src="work2/work2.10.jpg" alt="thumb 10" data-full="work2/work2.10.jpg">
+        <img class="project-thumb" src="work2/work2.11.jpg" alt="thumb 11" data-full="work2/work2.11.jpg">
+      </div>
     </div>
 
-    <!-- แถบภาพย่อย เลื่อนซ้าย-ขวาได้ -->
-    <div class="thumbs" id="thumbs">
-      <!-- ใส่กี่ภาพก็ได้ เปลี่ยน src ให้ตรงกับไฟล์ของคุณ -->
-      <img class="thumb is-active" src="work2/work2.1.jpg" alt="thumb 1" data-full="work2/work2.1.jpg" />
-      <img class="thumb" src="work2/work2.2.jpg" alt="thumb 2" data-full="work2/work2.2.jpg" />
-      <img class="thumb" src="work2/work2.3.jpg" alt="thumb 3" data-full="work2/work2.3.jpg" />
-      <img class="thumb" src="work2/work2.4.jpg" alt="thumb 4" data-full="work2/work2.4.jpg" />
-      <img class="thumb" src="work2/work2.5.jpg" alt="thumb 5" data-full="work2/work2.5.jpg" />
-      <img class="thumb" src="work2/work2.6.jpg" alt="thumb 2" data-full="work2/work2.6.jpg" />
-      <img class="thumb" src="work2/work2.7.jpg" alt="thumb 3" data-full="work2/work2.7.jpg" />
-      <img class="thumb" src="work2/work2.8.jpg" alt="thumb 4" data-full="work2/work2.8.jpg" />
-      <img class="thumb" src="work2/work2.9.jpg" alt="thumb 5" data-full="work2/work2.9.jpg" />
-      <img class="thumb" src="work2/work2.10.jpg" alt="thumb 4" data-full="work2/work2.10.jpg" />
-      <img class="thumb" src="work2/work2.11.jpg" alt="thumb 5" data-full="work2/work2.11.jpg" />
-    </div>
-  </div>
-</section>
-
-<style>
-/* --- Gallery styles (เพิ่มลงไฟล์นี้หรือย้ายไป styles.css ก็ได้) --- */
-.gallery { display: grid; gap: 12px; }
-.gallery-main {
-  border: 1px solid #e6e9ef; border-radius: 12px; overflow: hidden;
-  background: #000; display: flex; align-items: center; justify-content: center;
-  min-height: 320px;
-}
-.gallery-main img {
-  width: 100%; height: auto; max-height: 70vh; object-fit: contain; display: block;
-}
-
-.thumbs {
-  display: grid; grid-auto-flow: column; grid-auto-columns: max-content;
-  gap: 10px; overflow-x: auto; padding: 6px 2px;
-  scroll-snap-type: x mandatory;
-}
-.thumbs::-webkit-scrollbar { height: 8px; }
-.thumbs::-webkit-scrollbar-thumb { background: #cfd6e4; border-radius: 8px; }
-
-.thumb {
-  width: 100px; height: 70px; object-fit: cover; cursor: pointer;
-  border-radius: 8px; border: 2px solid transparent; scroll-snap-align: start;
-  transition: transform .15s ease, border-color .15s ease, opacity .15s ease;
-  opacity: .9;
-}
-.thumb:hover { transform: scale(1.03); opacity: 1; }
-.thumb.is-active { border-color: #004aad; opacity: 1; }
-@media (min-width: 768px) {
-  .thumb { width: 120px; height: 80px; }
-}
-</style>
-
-<script>
-(() => {
-  const main = document.getElementById('mainImage');
-  const thumbs = Array.from(document.querySelectorAll('.thumb'));
-  let currentIndex = 0;
-
-  function setActive(i) {
-    currentIndex = i;
-    const full = thumbs[i].dataset.full || thumbs[i].src;
-    main.src = full;
-    thumbs.forEach(t => t.classList.remove('is-active'));
-    thumbs[i].classList.add('is-active');
-    // ให้ภาพย่อยที่เลือกเลื่อนมามองเห็นอยู่กลาง ๆ
-    thumbs[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  }
-
-  thumbs.forEach((t, i) => {
-    t.addEventListener('click', () => setActive(i));
-    // ถ้าโหลดหน้าแล้วภาพมีปัญหา ไม่ให้พัง
-    t.addEventListener('error', () => t.style.display = 'none');
-  });
-
-  // ลูกศรซ้าย/ขวาเปลี่ยนรูป
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') setActive((currentIndex + 1) % thumbs.length);
-    if (e.key === 'ArrowLeft')  setActive((currentIndex - 1 + thumbs.length) % thumbs.length);
-  });
-
-  // ป้องกันแนวทางกรณีรูปหลัก error
-  main.addEventListener('error', () => {
-    // ลองรูปถัดไป
-    setActive((currentIndex + 1) % thumbs.length);
-  });
-})();
-</script>
-
-    <h2>รายละเอียดโครงการ </h2>
+    <h2>รายละเอียดโครงการ</h2>
     <p>
-      เราประเมินหน้างานตึก 5 ชั้น (ชั้นละ ~20 ยูนิต) อย่างละเอียด ตั้งแต่โครงสร้างเดิม สภาพงานสถาปัตย์ ระบบไฟ–ประปา–แอร์–สื่อสาร ไปจนถึงความปลอดภัยและการเข้ากฎหมายอาคาร พร้อมสแกนปัญหาแฝง (รั่วซึม แตกร้าว ระบบไม่รองรับโหลด) และจัดทำรายงานสภาพจริง–งบประมาณ–ไทม์ไลน์แบบเฟสเพื่อลดผลกระทบต่อการใช้งานอาคารเดิมให้มากที่สุด
+      เราประเมินหน้างานถนน/พื้นที่สาธารณะอย่างละเอียด ตั้งแต่โครงสร้างทางเดิม
+      สภาพพื้นทาง ระบบระบายน้ำ สัญญาณ/ป้ายจราจร ไปจนถึงความปลอดภัยระหว่างก่อสร้าง
+      พร้อมสแกนปัญหาแฝง (ทรุดตัว น้ำท่วมขัง ผิวทางเสียหาย) และจัดทำแผนซ่อมบำรุง
+      งบประมาณ และไทม์ไลน์แบบเฟส เพื่อให้การสัญจรได้รับผลกระทบน้อยที่สุด
     </p>
 
     <div class="specs">
       <div class="card">
-        <h4>ขนาดพื้นที่</h4>
-        <p>ที่ดิน ~60 ตร.วา / พื้นที่ใช้สอยประมาณ 180 ตร.ม.</p>
+        <h4>ขอบเขตงาน</h4>
+        <p>ซ่อมหลุมบ่อ · ติดตั้ง/ปรับปรุงการ์ดเลน · เก็บผิวทาง · ทำเครื่องหมายจราจร</p>
       </div>
       <div class="card">
-        <h4>ฟังก์ชันหลักในหอพัก</h4>
-        <p>1 ห้องนอน · 1 ห้องน้ำ </p>
+        <h4>มาตรฐาน</h4>
+        <p>อ้างอิงมาตรฐานทางหลวง/ทล. · งานจราจรและความปลอดภัยหน้างาน</p>
       </div>
       <div class="card">
-        <h4>วัสดุเด่น</h4>
-        <p>พื้นไม้ลามิเนตเกรดกันชื้น · กระจกกันความร้อน · สุขภัณฑ์ประหยัดน้ำ</p>
+        <h4>วัสดุหลัก</h4>
+        <p>แอสฟัลต์คอนกรีต · คอนกรีตเสริมเหล็ก · การ์ดเรล/บีบบ๊อกซ์ตามสเปก</p>
       </div>
       <div class="card">
-        <h4>สไตล์</h4>
-        <p>Modern Minimal · โทนไม้ธรรมชาติ · แสงธรรมชาติเต็มพื้นที่</p>
+        <h4>การบริหารงาน</h4>
+        <p>แผนปิดจราจรเป็นช่วง · รายงานความคืบหน้า · รับประกันงานตามเงื่อนไข</p>
       </div>
     </div>
 
     <p style="margin-top:16px">
-      หากสนใจแบบบ้านลักษณะนี้ หรืออยากปรับให้เข้ากับที่ดิน/งบประมาณของคุณ
-      สามารถกดปุ่มด้านล่างเพื่อติดต่อทีมงานสำหรับคำปรึกษาฟรี
+      สนใจให้ทีมงานเข้าไปสำรวจหน้างานและเสนอแนวทางซ่อมบำรุงอย่างมืออาชีพ
     </p>
     <a class="cta" href="contact.html">ติดต่อสอบถาม</a>
   </section>
@@ -182,5 +86,35 @@
   <footer>
     © 2025 TRONGJAI DESIGN & CONSTRUCTION · สงวนลิขสิทธิ์
   </footer>
+
+  <!-- สคริปต์เดียวกับหน้าแรก -->
+  <script>
+  (() => {
+    const main = document.getElementById('mainImage');
+    const thumbs = Array.from(document.querySelectorAll('.project-thumb'));
+    let currentIndex = 0;
+
+    function setActive(i) {
+      currentIndex = i;
+      const full = thumbs[i].dataset.full || thumbs[i].src;
+      main.src = full;
+      thumbs.forEach(t => t.classList.remove('is-active'));
+      thumbs[i].classList.add('is-active');
+      thumbs[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    thumbs.forEach((t, i) => {
+      t.addEventListener('click', () => setActive(i));
+      t.addEventListener('error', () => t.style.display = 'none');
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') setActive((currentIndex + 1) % thumbs.length);
+      if (e.key === 'ArrowLeft')  setActive((currentIndex - 1 + thumbs.length) % thumbs.length);
+    });
+
+    main.addEventListener('error', () => setActive((currentIndex + 1) % thumbs.length));
+  })();
+  </script>
 </body>
 </html>

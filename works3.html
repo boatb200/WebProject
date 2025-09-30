@@ -5,49 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ผลงาน — รีโนเวทคอนโด | TRONGJAI DESIGN & CONSTRUCTION</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    :root { color-scheme: light dark; }
-    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.6; color:#111; }
-    header { position: relative; background:#004aad; color:#fff; padding:40px 16px; text-align:center; }
-    nav { background:#222; position:sticky; top:0; z-index:10; padding:10px; text-align:center; }
-    nav a { color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; display:inline-block; }
-    nav a:hover, nav a:focus-visible { background:#333; outline:none; }
-    .wrap { max-width:1100px; margin:24px auto; padding:0 16px; }
-    .back-link { display:inline-block; margin-bottom:16px; text-decoration:none; color:#004aad; }
-    .back-link:hover, .back-link:focus-visible { text-decoration:underline; outline:none; }
-
-    .gallery { display:grid; gap:12px; }
-    .gallery-main {
-      border:1px solid #e6e9ef; border-radius:12px; overflow:hidden;
-      background:#000; display:flex; align-items:center; justify-content:center; min-height:320px;
-    }
-    .gallery-main img,
-    .gallery-main video {
-      width:100%; height:auto; max-height:70vh; object-fit:contain; display:block; aspect-ratio:16/9;
-    }
-
-    .thumbs {
-      display:grid; grid-auto-flow:column; grid-auto-columns:max-content;
-      gap:10px; overflow-x:auto; padding:6px 2px; scroll-snap-type:x mandatory;
-    }
-    .thumb { width:100px; height:70px; object-fit:cover; cursor:pointer;
-      border-radius:8px; border:2px solid transparent; scroll-snap-align:start;
-      transition: transform .15s ease, border-color .15s ease, opacity .15s ease; opacity:.95;
-    }
-    .thumb:hover, .thumb:focus-visible { transform:scale(1.03); opacity:1; outline:none; border-color:#7fa9ff; }
-    .thumb.is-active { border-color:#004aad; }
-    @media (min-width:768px){ .thumb{ width:120px; height:80px; } }
-
-    .specs { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top:12px; }
-    .specs .card { border:1px solid #e6e9ef; border-radius:12px; padding:12px; background:#fff; }
-    .specs .card h4 { margin:0 0 6px; color:#004aad; }
-
-    .cta { display:inline-block; margin-top:8px; padding:10px 16px; border-radius:10px;
-      background:#004aad; color:#fff; text-decoration:none; font-weight:600; }
-    .cta:hover, .cta:focus-visible { background:#0c57d6; outline:none; }
-
-    footer { margin-top:32px; padding:16px; text-align:center; color:#666; border-top:1px solid #e6e9ef; }
-  </style>
 </head>
 <body>
   <header>
@@ -63,125 +20,94 @@
     <a href="performance.html">Performance</a>
   </nav>
 
-  <section class="wrap">
+  <section class="wrap project-page">
     <a class="back-link" href="performance.html">← กลับไปหน้าผลงาน</a>
 
-    <div class="gallery" aria-label="แกลเลอรีผลงาน">
-      <div class="gallery-main" id="galleryMain">
+    <div class="project-gallery" aria-label="แกลเลอรีผลงาน">
+      <div class="project-gallery-main" id="galleryMain">
         <img id="mainMedia" src="work3/work3.1.jpg" alt="ภาพรีโนเวทคอนโด มุมมองที่ 1">
       </div>
 
-      <div class="thumbs" id="thumbs">
-        <img class="thumb is-active" src="work3/work3.1.jpg" alt="ตัวอย่างมุมที่ 1" data-full="work3/work3.1.jpg" loading="lazy" />
-        <img class="thumb" src="work3/work3.2.jpg" alt="ตัวอย่างมุมที่ 2" data-full="work3/work3.2.jpg" loading="lazy" />
-        <img class="thumb" src="work3/work3.3.jpg" alt="ตัวอย่างมุมที่ 3" data-full="work3/work3.3.jpg" loading="lazy" />
-        <img class="thumb" src="work3/work3.4.jpg" alt="ตัวอย่างมุมที่ 4" data-full="work3/work3.4.jpg" loading="lazy" />
-        <img class="thumb" src="work3/work3.5.jpg" alt="ตัวอย่างมุมที่ 5" data-full="work3/work3.5.jpg" loading="lazy" />
+      <div class="project-thumbs" id="thumbs">
+        <img class="project-thumb is-active" src="work3/work3.1.jpg" alt="ตัวอย่างมุมที่ 1" data-full="work3/work3.1.jpg" loading="lazy">
+        <img class="project-thumb" src="work3/work3.2.jpg" alt="ตัวอย่างมุมที่ 2" data-full="work3/work3.2.jpg" loading="lazy">
+        <img class="project-thumb" src="work3/work3.3.jpg" alt="ตัวอย่างมุมที่ 3" data-full="work3/work3.3.jpg" loading="lazy">
+        <img class="project-thumb" src="work3/work3.4.jpg" alt="ตัวอย่างมุมที่ 4" data-full="work3/work3.4.jpg" loading="lazy">
+        <img class="project-thumb" src="work3/work3.5.jpg" alt="ตัวอย่างมุมที่ 5" data-full="work3/work3.5.jpg" loading="lazy">
 
-        <!-- วิดีโอเป็น thumbnail: ใส่ poster ให้เห็นรูปปก -->
-        <video class="thumb"
-               muted
-               playsinline
-               webkit-playsinline
-               loop
-               preload="metadata"
+        <!-- วิดีโอเป็น thumbnail -->
+        <video class="project-thumb"
+               muted playsinline webkit-playsinline loop preload="metadata"
                poster="video/re1_poster.png"
                data-full="video/re1.mp4"
                aria-label="วิดีโองานรีโนเวท (คลิกเพื่อเล่น)">
           <source src="video/re1.mp4" type="video/mp4">
         </video>
 
-        <video class="thumb"
-       muted
-       playsinline
-       webkit-playsinline
-       loop
-       preload="metadata"
-       poster="video/re2_poster.png"
-       data-full="video/re2.mp4"
-       aria-label="วิดีโอรีโนเวท (คลิกเพื่อเล่น)">
-  <source src="video/re2.mp4" type="video/mp4">
-</video>
-
+        <video class="project-thumb"
+               muted playsinline webkit-playsinline loop preload="metadata"
+               poster="video/re2_poster.png"
+               data-full="video/re2.mp4"
+               aria-label="วิดีโองานรีโนเวท (คลิกเพื่อเล่น)">
+          <source src="video/re2.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
 
-  <section class="wrap">
-    <section class="wrap">
-  <h2>รายละเอียดโครงการ</h2>
-  <p>
-    โครงการนี้เป็นงานรีโนเวทคอนโดมิเนียมยูนิตเดี่ยว โดยทีมงานของเราได้เข้าไปปรับปรุงทั้งโครงสร้างพื้นฐานและงานตกแต่งภายในใหม่ทั้งหมด
-    เพื่อให้ตอบโจทย์การใช้ชีวิตของเจ้าของห้อง ทั้งในแง่ของความสะดวกสบาย การจัดฟังก์ชันที่ลงตัว และบรรยากาศที่อบอุ่นทันสมัย
-  </p>
-  <div class="specs">
-    <div class="card">
-      <h4>ขนาดพื้นที่</h4>
-      <p>คอนโดยูนิตขนาด ~45 ตร.ม. (1 ห้องนอน · 1 ห้องน้ำ · ห้องนั่งเล่น · ครัว)</p>
+  <section class="wrap project-page">
+    <h2>รายละเอียดโครงการ</h2>
+    <p>
+      โครงการนี้เป็นงานรีโนเวทคอนโดมิเนียมยูนิตเดี่ยว โดยทีมงานของเราได้เข้าไปปรับปรุงทั้งโครงสร้างพื้นฐานและงานตกแต่งภายในใหม่ทั้งหมด
+      เพื่อให้ตอบโจทย์การใช้ชีวิตของเจ้าของห้อง ทั้งในแง่ของความสะดวกสบาย การจัดฟังก์ชันที่ลงตัว และบรรยากาศที่อบอุ่นทันสมัย
+    </p>
+    <div class="specs">
+      <div class="card">
+        <h4>ขนาดพื้นที่</h4>
+        <p>คอนโดยูนิตขนาด ~45 ตร.ม. (1 ห้องนอน · 1 ห้องน้ำ · ห้องนั่งเล่น · ครัว)</p>
+      </div>
+      <div class="card">
+        <h4>งานที่ดำเนินการ</h4>
+        <p>ปรับผังเฟอร์นิเจอร์ใหม่ · เปลี่ยนพื้นไม้ลามิเนต · ทำฝ้าและระบบไฟใหม่ · ติดตั้งครัวบิวท์อิน</p>
+      </div>
+      <div class="card">
+        <h4>วัสดุเด่น</h4>
+        <p>พื้นไม้ SPC กันน้ำ · เคาน์เตอร์ครัวหินควอทซ์ · สุขภัณฑ์ประหยัดน้ำ · กระจกบานเลื่อนบานใหญ่</p>
+      </div>
+      <div class="card">
+        <h4>สไตล์การตกแต่ง</h4>
+        <p>Modern Minimal โทนอบอุ่น · เน้นเส้นสายเรียบง่าย · ใช้แสงธรรมชาติผสมไฟ Warm White</p>
+      </div>
     </div>
-    <div class="card">
-      <h4>งานที่ดำเนินการ</h4>
-      <p>ปรับผังเฟอร์นิเจอร์ใหม่ · เปลี่ยนพื้นไม้ลามิเนต · ทำฝ้าและระบบไฟใหม่ · ติดตั้งครัวบิวท์อิน</p>
-    </div>
-    <div class="card">
-      <h4>วัสดุเด่น</h4>
-      <p>พื้นไม้ SPC กันน้ำ · เคาน์เตอร์ครัวหินควอทซ์ · สุขภัณฑ์ประหยัดน้ำ · กระจกบานเลื่อนบานใหญ่</p>
-    </div>
-    <div class="card">
-      <h4>สไตล์การตกแต่ง</h4>
-      <p>Modern Minimal โทนอบอุ่น · เน้นเส้นสายเรียบง่าย · ใช้แสงธรรมชาติผสมไฟ Warm White</p>
-    </div>
-  </div>
-  <p style="margin-top:16px">
-    หากคุณสนใจรีโนเวทคอนโดในลักษณะนี้ สามารถติดต่อทีมงานเราเพื่อขอคำปรึกษาและประเมินราคาได้ฟรี
-  </p>
-  <a class="cta" href="contact.html">ติดต่อสอบถาม</a>
-</section>
-
+    <p style="margin-top:16px">หากคุณสนใจรีโนเวทคอนโดในลักษณะนี้ สามารถติดต่อทีมงานเราเพื่อขอคำปรึกษาและประเมินราคาได้ฟรี</p>
+    <a class="cta" href="contact.html">ติดต่อสอบถาม</a>
+  </section>
 
   <footer>© 2025 TRONGJAI DESIGN & CONSTRUCTION · สงวนลิขสิทธิ์</footer>
 
   <script>
   (() => {
     const mainWrap = document.getElementById('galleryMain');
-    const thumbs = Array.from(document.querySelectorAll('.thumbs .thumb'));
+    const thumbs = Array.from(document.querySelectorAll('.project-thumbs .project-thumb'));
     let currentIndex = 0;
 
     function makeVideo(src, poster) {
       const v = document.createElement('video');
-      // ใส่แอตทริบิวต์/พร็อพที่จำเป็น "ก่อน" ระบุ src
-      v.setAttribute('controls', '');       // ให้ควบคุมได้
-      v.setAttribute('autoplay', '');       // เพิ่มทั้งแอตทริบิวต์และพร็อพ
-      v.autoplay = true;
-      v.muted = true;                       // ต้อง mute เพื่อ autoplay
-      v.setAttribute('muted', '');          // iOS บางเวอร์ชันต้องมีแอตทริบิวต์
-      v.setAttribute('playsinline', '');
-      v.setAttribute('webkit-playsinline', '');
-      v.playsInline = true;
-
+      v.setAttribute('controls', '');
+      v.setAttribute('autoplay', ''); v.autoplay = true;
+      v.setAttribute('muted', '');    v.muted = true;
+      v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', ''); v.playsInline = true;
       v.preload = 'metadata';
       if (poster) v.poster = poster;
-
-      v.src = src;                          // ใส่ src หลังจากตั้งค่า flags แล้ว
-
-      // บางครั้งเบราว์เซอร์ยังต้องเรียก play() ด้วย gesture จำลอง
-      // เรียกแล้วกลืน error ไป เพื่อไม่ให้คอนโซลแดง
-      v.addEventListener('canplay', () => {
-        const p = v.play();
-        if (p && typeof p.catch === 'function') p.catch(() => {});
-      });
-
+      v.src = src;
+      v.addEventListener('canplay', () => { const p = v.play(); if (p && p.catch) p.catch(()=>{}); });
       return v;
     }
 
-    function renderMainFrom(src) {
+    function renderMainFrom(src, poster) {
       mainWrap.innerHTML = '';
-
       if (typeof src === 'string' && src.toLowerCase().endsWith('.mp4')) {
-        // ใส่ poster เดียวกับ thumbnail ถ้ามีไฟล์
-        const posterGuess = 'videos/re1_poster.jpg';
-        const v = makeVideo(src, posterGuess);
-        mainWrap.appendChild(v);
+        mainWrap.appendChild(makeVideo(src, poster));
       } else {
         const img = document.createElement('img');
         img.src = src;
@@ -198,17 +124,18 @@
       }
       return el.src;
     }
+    function posterFromThumb(el){ return el.poster || el.getAttribute('poster') || ''; }
 
     function setActive(i) {
       currentIndex = i;
       const full = fullSrcFromThumb(thumbs[i]);
-      renderMainFrom(full);
+      const poster = posterFromThumb(thumbs[i]);
+      renderMainFrom(full, poster);
       thumbs.forEach(t => t.classList.remove('is-active'));
       thumbs[i].classList.add('is-active');
       thumbs[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
 
-    // bind events
     thumbs.forEach((t, i) => {
       t.tabIndex = 0;
       t.addEventListener('click', () => setActive(i));
@@ -223,7 +150,6 @@
       if (e.key === 'ArrowLeft')  setActive((currentIndex - 1 + thumbs.length) % thumbs.length);
     });
 
-    // ถ้ารูปหลักเออเรอร์ ให้ข้ามไปถัดไป
     const firstMain = document.getElementById('mainMedia');
     if (firstMain && firstMain.tagName === 'IMG') {
       firstMain.addEventListener('error', () => setActive((currentIndex + 1) % thumbs.length));
