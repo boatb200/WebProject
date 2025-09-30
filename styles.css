@@ -170,6 +170,20 @@ details.accordion summary {
   /* width: 100%; justify-content: center; */
 }
 
+/* ให้การ์ดสูงเท่ากัน และดันปุ่มไปล่างสุด */
+.grid { align-items: stretch; }                 /* ดึงความสูงการ์ดในแถวให้เท่ากัน */
+.card.bg { display: flex; flex-direction: column; }
+.card.bg details.accordion { margin-top: auto; } /* ดันปุ่มดูรายละเอียดลงล่าง */
+
+/* ทำหน้าตาปุ่มให้สม่ำเสมอ */
+details.accordion summary {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
+  /* ถ้าอยากให้ปุ่มกว้างเท่ากันทุกใบ ให้ปลดคอมเมนต์บรรทัดล่าง */
+  /* width: 100%; justify-content: center; */
+}
+
 /* Footer */
 footer { 
   background:#0f1a2b; 
